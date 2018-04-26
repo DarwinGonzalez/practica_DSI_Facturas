@@ -8,6 +8,6 @@ const api = express.Router()
 //api.post('/producto', productoController.getProducto)
 
 api.get('/empleado', empleadosController.main)
-api.post('/empleado', empleadosController.getEmpleado)
+
 
 module.exports = api

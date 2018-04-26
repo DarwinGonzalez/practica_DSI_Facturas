@@ -8,22 +8,12 @@ import api        from './config/routes'
 import mongoose   from 'mongoose'
 import Mongoclient from 'mongodb'
 import fs from 'fs'
-
+  
 const app = express()
 
-Mongoclient.connect('mongodb://localhost/test', function(err, database){
-    
-if(err) {
-        return console.dir(err);
-    }
+mongoose.connect('mongodb://localhost/prueba', function(err, database) {  if(err) throw new Error(err) })
 
-    const MyDB = database.db('test');
-    var FileProductos = fs.readFileSync('./data/Productos.csv', 'utf8');
-    var FileEmpleados = fs.readFileSync('./data/Empleados.txt', 'utf8');
-    var FileEmpleadosVec = FileEmpleados.split('\n');
-    console.log(FileEmpleadosVec);
-    
-});
+
 
 app.set('views', path.join(__dirname, '/app/views'))
 app.set('view engine', 'ejs')
