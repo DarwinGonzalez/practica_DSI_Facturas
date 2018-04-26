@@ -1,4 +1,4 @@
-import productoController from '../app/controllers/productoController'
+//import productoController from '../app/controllers/productoController'
 import empleadosController from '../app/controllers/empleadosController'
 import express        from 'express'
 

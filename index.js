@@ -22,7 +22,8 @@ if(err) {
     var FileEmpleados = fs.readFileSync('./data/Empleados.txt', 'utf8');
     var FileEmpleadosVec = FileEmpleados.split('\n');
     console.log(FileEmpleadosVec);
-})
+    
+});
 
 app.set('views', path.join(__dirname, '/app/views'))
 app.set('view engine', 'ejs')

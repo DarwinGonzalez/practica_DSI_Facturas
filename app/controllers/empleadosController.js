@@ -12,11 +12,11 @@ async function getEmpleado(req, res) {
     console.log(FileEmpleados);
     var FileEmpleadosVec = FileEmpleados.split('\n');
 
-    for (i = 0; i < FileEmpleadosVec.length; i++ ) {
+    for (var i = 0; i < FileEmpleadosVec.length; i++ ) {
         const empleado = new Empleado({ 'nombre': FileEmpleadosVec[i] })
         let result = await Empleado.findOne({'nombre': FileEmpleadosVec[i] })
         if (result) throw new Error('Empleado ya existe')
-        item.save()
+        empleado.save()
     }
     res.redirect('/empleado')
 }
