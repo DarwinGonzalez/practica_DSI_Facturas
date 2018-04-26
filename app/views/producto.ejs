@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+     <head>
+     <title>Practica Empleados en base de datos</title>
+     </head>
+
+     <body>
+         <h1>Into to Node and MongoDB</h1>
+         <form method="post" action="/producto">
+             <label>Inserte los datos desde el fichero</label><br>
+             <input type="submit" value="Add Name">
+         </form>
+        
+        <h2> Productos </h2>
+        <ul>
+        <%for (var i=0; i<productos.length; i++) {%>
+                <li><%=productos[i].producto%> : <%=productos[i].precio%></li>
+        <% } %>
+        <ul>
+     </body>
+</html>
